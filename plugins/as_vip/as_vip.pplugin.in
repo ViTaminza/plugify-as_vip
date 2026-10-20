@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify/refs/heads/main/schemas/plugin.schema.json",
+	"version": "${AS_VIP_VERSION}",
+	"name": "as_vip",
+	"description": "Admin module granting VIP to admins on connection (port of the Pisex admin_system module 'VIP'): the vip.ini 'VIP' block maps admin permissions to vip groups - '@admin/root' holders get the '@admin/root' group, every other admin the group of the first permission he holds - and the grant goes through the vip core's VIP_GiveClientVIP (permanent for the session, no vip_users write). Requires admin_system and vip.",
+	"author": "Pisex, ported to Plugify",
+	"website": "https://github.com/untrustedmodders/plugify",
+	"license": "GPL-3.0",
+	"entry": "bin/as_vip",
+	"platforms": [],
+	"language": "cpp",
+	"dependencies": [
+		{
+			"name": "s2sdk",
+			"constraints": ">=2.18.2"
+		},
+		{
+			"name": "admin_system",
+			"constraints": ">=1.0.0"
+		},
+		{
+			"name": "vip",
+			"constraints": ">=1.0.0"
+		},
+		{
+			"name": "hudmenu",
+			"constraints": ">=1.0.0",
+			"optional": true
+		}
+	],
+	"methods": []
+}
