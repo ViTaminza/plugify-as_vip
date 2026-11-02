@@ -2,9 +2,6 @@
     global:
         Plugify_*;
 
-        /* s2sdk binding slots (defined by s2sdk_bindings, filled by the plugify module) */
-        __s2sdk_*;
-
         /* admin_system binding slots (defined by the generated consumer bindings, filled by the
            plugify module from the admin_system plugin's exported methods) */
         __admin_system_*;
@@ -13,9 +10,8 @@
            the vip plugin's exported methods) */
         __vip_*;
 
-        /* hudmenu binding slots (defined by hudmenu_bindings, filled by the plugify module from
-           the hudmenu plugin's exported GetClientMenuType/SetClientMenuType) */
-        __hudmenu_*;
+        /* No s2sdk / hudmenu slots: the plugin makes no s2sdk calls and has no menu of its own,
+           so it exports no __s2sdk_* / __hudmenu_* globals (docs/PLUGIN_STANDARD.md §7). */
 
         /* No exported methods: as_vip exposes nothing to other plugins. */
 
